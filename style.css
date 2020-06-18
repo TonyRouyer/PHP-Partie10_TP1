@@ -1,0 +1,35 @@
+body {
+    background-color: green;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+p {
+    font-size: 1.2em; 
+}
+label {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+.radioInput {
+    flex-direction: row;
+    margin: 0 auto;
+} 
+#sendBtn {
+    width: 25%;
+    margin: 10px auto 20px auto;
+    background-color: white;
+}
+#sendBtn:hover {
+    background-color: darkgray;
+    color: white;
+}
+.invalid {
+    font-size: 0.9em;
+    color: red;
+    display: flex;
+    flex-direction: column;
+}
