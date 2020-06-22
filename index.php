@@ -8,6 +8,7 @@
     </head>
     <body>
         <?php
+            //si toute les variable ne sont pas vide et corespondent au regex, on les affiche
             if (!empty($_POST['lastname']) && preg_match("/^[a-zA-Z ,.'-]+$/", $_POST['lastname']) &&
                 !empty($_POST['firstname']) && preg_match('/^[a-zA-Z]+$/', $_POST['firstname']) &&
                 !empty($_POST['birthDate']) && preg_match('/^(19[0-9][0-9]|200[0-9]|2010)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]$)/', $_POST['birthDate']) &&
@@ -39,7 +40,7 @@
                     <p>Si vous etiez un super-hero ? <?= $_POST['heroQuestion'] ?></p>
                     <p>Avez vous deja réaliser des "hack" ? <?= $_POST['hackInfo'] ?></p>
                     <p>Avez vous une expérience en programation informatique ? <?= $_POST['experience'] ?></p>
-                <?php } else { ?>
+                <?php } else {  //sinon on affiche le formulaire?>
                     <form action="index.php" method="POST">
                         <label for="lastname">Nom :</label>
                         <input type="text" id="lastname" name="lastname">
@@ -249,13 +250,8 @@
                                 ?><p class="invalid"><?= 'Veuillez renseigner ce champs (obligatoire)' ?></p><?php
                             }?>
 
-
                             <input type="submit" value="Envoyer" id="sendBtn">
                         </form> 
                 <?php } ?>
-
-
-
-
     </body>
 </html>
